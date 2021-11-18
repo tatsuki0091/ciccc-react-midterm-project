@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import "./App.css";
+import Header from "./components/layout/Header";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Top from "./components/top/Top";
+import Search from "./components/search/Search";
+
+export const DataContext = createContext();
 
 function App() {
+  const [cityName, setCityName] = useState("Vancouver");
+  const value = {
+    cityName,
+    setCityName,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <DataContext.Provider value={value}>
+        <Header text={"Wheather News"} />
+        <Router>
+          <Search />
+          <Routes>
+            <Route path="/" element={<Top />} />
+          </Routes>
+        </Router>
+      </DataContext.Provider>
+
+      {/* // react-router-domがVersion 6になって書き方が変わったので注意 */}
+    </>
   );
 }
 
