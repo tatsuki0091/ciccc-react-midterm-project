@@ -1,0 +1,80 @@
+.frame {
+  text-align: center;
+}
+
+.imgSection {
+  text-align: center;
+}
+
+@media (max-width: 649px) {
+  table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 95%;
+  }
+  table td,
+  table th {
+    display: block;
+    border: 1px solid #aaa;
+    padding: 10px;
+  }
+  table th {
+    background-color: #eee;
+  }
+}
+
+@media (min-width: 650px) {
+  table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 47%;
+  }
+  table td,
+  table th {
+    padding: 10px;
+    border: 1px solid #aaa;
+  }
+  table th {
+    background-color: #eee;
+  }
+
+  .thAndTd {
+    border: 1px solid #aaa;
+    padding: 4px;
+    writing-mode: horizontal-tb;
+    height: 25px;
+  }
+  .th {
+    background-color: #ccc;
+  }
+
+  .img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+/* @media (max-width: 649px) {
+  .table {
+    border: solid 1px #ccc;
+    padding: 10px;
+  }
+  .thAndTd {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+  .th {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+
+  .img {
+    width: 20rem;
+    height: 20rem;
+  }
+} */
